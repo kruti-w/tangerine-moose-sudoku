@@ -39,7 +39,7 @@ function nextEmptyCell(cells, index){
       return i;
     }
   }
-  for (let i = 0; i < index + 1; i++){
+  for (let i = 0; i < index; i++){
     if (cells[i] == ''){ // or do we write null???
       return i;
     }
