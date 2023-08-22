@@ -1,5 +1,5 @@
 import React from 'react';
-//import { FaBars, FaSearch } from 'react-icons/fa';
+import cookie from './cookie.png';
 
 // export function Header({ title, appMode }) {
 //   return (
@@ -31,6 +31,18 @@ import React from 'react';
 //   );
 // }
 
+// Reusable menu component
+// const HamburgerMenu = () => {
+//   return (
+//     <span className="inline-block h-7 w-7 bg-gray-500">
+//       <div class="w-7 h-0.5 bg-white"></div>
+//         <div class="w-7 h-0.5 bg-white"></div>
+//         <div class="w-7 h-0.5 bg-white"></div>
+//     </span>
+
+//   );
+// };
+
 export function Header({ title, appMode }){
   return (
     <header className="w-full flex-grow-0">
@@ -39,7 +51,9 @@ export function Header({ title, appMode }){
         <div class="w-7 h-0.5 bg-white"></div>
         <div class="w-7 h-0.5 bg-white"></div>
       </div>
-
+      <div class="flex items-center justify-end pr-2">
+        <img src={cookie} alt="Image" class="h-7 w-7" />
+        </div>
     </header>
   );
-}
+};
