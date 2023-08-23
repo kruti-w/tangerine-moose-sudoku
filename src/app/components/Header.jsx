@@ -43,17 +43,50 @@ import cookie from './cookie.png';
 //   );
 // };
 
-export function Header({ title, appMode }){
+function MenuIcon(){
   return (
-    <header className="w-full flex-grow-0">
-      <div class="space-y-2">
+    <div class="space-y-2">
         <div class="w-7 h-0.5 bg-white"></div>
         <div class="w-7 h-0.5 bg-white"></div>
         <div class="w-7 h-0.5 bg-white"></div>
       </div>
-      <div class="flex items-center justify-end pr-2">
-        <img src={cookie} alt="Image" class="h-7 w-7" />
-        </div>
-    </header>
   );
 };
+
+// export function Header({ title, appMode }){
+//   return (
+//     <header className="w-full flex-grow-0">
+//       <div class="space-y-2">
+//         <div class="w-7 h-0.5 bg-white"></div>
+//         <div class="w-7 h-0.5 bg-white"></div>
+//         <div class="w-7 h-0.5 bg-white"></div>
+//       </div>
+//       <div class="flex items-center justify-end pr-2">
+//         <img src={cookie} alt="Image" class="h-7 w-7" />
+//         </div>
+//     </header>
+//   );
+// };
+
+function CookieIcon(){
+  return (
+    <div class="flex items-center justify-end pr-2">
+     <img src={cookie} alt="Image" class="h-7 w-7" />
+    </div>
+  );
+};
+
+export function Header({ title, appMode }){
+  return (
+    <header className="w-full flex-grow-0">
+      <div class="flex items-center justify between">
+      <MenuIcon />
+      <div class="flex-grow"></div>
+      <CookieIcon />
+      <CookieIcon />
+      <CookieIcon />
+      </div>
+
+    </header>
+  );
+}
